@@ -21,6 +21,7 @@ foreach(SHM_IMGAE_BRIDGE_EXE ${SHM_IMGAE_BRIDGE_FILES})
   install(TARGETS ${SHM_IMGAE_BRIDGE_EXE} DESTINATION lib/${PROJECT_NAME})
 endforeach()
 
+if(PCL_FOUND)
 set(SHM_PCL_BRIDGE_FILES
   shm_pcl8k_bridge
   shm_pcl512k_bridge
@@ -43,3 +44,4 @@ foreach(SHM_PCL_BRIDGE_EXE ${SHM_PCL_BRIDGE_FILES})
   rosidl_target_interfaces(${SHM_PCL_BRIDGE_EXE} ${PROJECT_NAME} "rosidl_typesupport_cpp")
   install(TARGETS ${SHM_PCL_BRIDGE_EXE} DESTINATION lib/${PROJECT_NAME})
 endforeach()
+endif()

@@ -25,9 +25,9 @@ find_package(sensor_msgs REQUIRED)
 
 find_package(ament_cmake REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(Open3D)
+#find_package(Open3D)
 find_package(Boost QUIET)
-find_package(PCL REQUIRED QUIET COMPONENTS common io)
+#find_package(PCL REQUIRED QUIET COMPONENTS common io)
 find_package(pcl_msgs REQUIRED)
 # pcl vtk conflict
 list(REMOVE_ITEM PCL_LIBRARIES

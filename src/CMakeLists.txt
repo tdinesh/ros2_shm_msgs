@@ -31,6 +31,7 @@ foreach(SHM_IMAGE_EXE ${SHM_IMAGE_FILES})
   install(TARGETS ${SHM_IMAGE_EXE} DESTINATION lib/${PROJECT_NAME})
 endforeach()
 
+if(PCL_FOUND)
 set(SHM_PCL_FILES
   pcl_talker
   pcl8k_talker
@@ -51,3 +52,4 @@ foreach(SHM_PCL_EXE ${SHM_PCL_FILES})
   rosidl_target_interfaces(${SHM_PCL_EXE} ${PROJECT_NAME} "rosidl_typesupport_cpp")
   install(TARGETS ${SHM_PCL_EXE} DESTINATION lib/${PROJECT_NAME})
 endforeach()
+endif()

@@ -51,6 +51,7 @@ install(TARGETS ${PROJECT_NAME}_image
   )
 ament_export_libraries(${PROJECT_NAME}_image)
 
+if(PCL_FOUND)
 add_library(${PROJECT_NAME}_pcl
     ./pcl_conversions.cpp
 )
@@ -73,3 +74,4 @@ install(TARGETS ${PROJECT_NAME}_pcl
   DESTINATION lib/
   )
 ament_export_libraries(${PROJECT_NAME}_pcl)
+endif()
